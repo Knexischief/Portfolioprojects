@@ -3,9 +3,9 @@ SELECT
 FROM
     portfolioproject.coviddeaths
     ##WHERE location like '%europe%'
-ORDER BY 3 , 4;
+ORDER BY 3, 4;
 
-##Select data that we are going to use.
+##Select data that I am going to use.
 
 SELECT 
     location,
@@ -46,7 +46,7 @@ FROM
     coviddeaths
 ##WHERE
     ##location LIKE '%ghana%'
-ORDER BY 1 , 2;
+ORDER BY 1, 2;
 
 ##Looking at country with highest infection rate compared to population 
 
@@ -54,11 +54,11 @@ SELECT
     location,
     population,
     MAX(total_cases) AS Highestinfectioncount,
-    MAX((total_cases / population)) * 100 AS percentage_population_infection
+    MAX(total_cases / population) * 100 AS percentage_population_infection
 FROM
     coviddeaths
     ##WHERE location like '%ghana%'
-GROUP BY location , population
+GROUP BY location, population
 ORDER BY 4 DESC;
 
 ##Showing Countries with highest death count per population
